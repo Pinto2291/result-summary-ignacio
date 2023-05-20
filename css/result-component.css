@@ -6,7 +6,7 @@ section.result-component {
   justify-content: space-around;
   text-align: center;
   border-radius: inherit;
-  background-color: #6040FD;
+  background: linear-gradient(to bottom, #6040FD, #1612df);
 }
 
 .result-component-title h2{
@@ -33,7 +33,7 @@ section.result-component {
   justify-content: center;
   padding: 45px;
   border-radius: 50%;
-  background-color: #4B23CA;
+  background:linear-gradient(to bottom, #4B23CA, #5C45ED);
   color: #B9A9FD;
   font-weight: bold;
 }

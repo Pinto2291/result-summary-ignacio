@@ -1,7 +1,8 @@
 let resultContainer = document.querySelector('.result-component');
 let stateRange = document.getElementById('state-range');
-let status = document.getElementById('status');
+let statusRandom = document.getElementById('status');
 let paragraph = document.getElementById('result-paragraph');
+let numbersContainer = document.getElementById('numbers-container');
 let reaction = document.getElementById('reaction');
 let memory = document.getElementById('memory');
 let verbal = document.getElementById('verbal');
@@ -46,20 +47,33 @@ function randomValues() {
 
   if (result >= 75) {
     resultContainer.classList.add('result-component');
+    numbersContainer.classList.add('numbers');
     resultContainer.classList.remove('result-component-warning', 'result-component-danger');
+    numbersContainer.classList.remove('numbers-warning', 'numbers-danger')
     stateRange.innerText = result;
+    statusRandom.innerText = 'Great';
+    paragraph.innerText = "You scored higher than 65% of the people who have taken these tests."
   }
 
-  if (result <= 74 || result > 43) {
+  if (result <= 74 && result > 43) {
     resultContainer.classList.add('result-component-warning');
+    numbersContainer.classList.add('numbers-warning');
     resultContainer.classList.remove('result-component', 'result-component-danger');
+    numbersContainer.classList.remove('numbers', 'numbers-danger');
     stateRange.innerText = result;
+    statusRandom.innerText = 'Warning';
+    paragraph.innerText = "You scored lower than 81% of the people who have taken these tests."
+
   }
 
   if (result <= 43) {
     resultContainer.classList.add('result-component-danger');
+    numbersContainer.classList.add('numbers-danger');
     resultContainer.classList.remove('result-component-warning', 'result-component');
+    numbersContainer.classList.remove('numbers', 'numbers-warning');
     stateRange.innerText = result;
+    statusRandom.innerText = 'Danger';
+    paragraph.innerText = "You scored lower than 43% of the people who have taken these tests."
   }
 
 }

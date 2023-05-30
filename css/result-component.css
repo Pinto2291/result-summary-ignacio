@@ -60,7 +60,47 @@ section.result-component-danger {
   font-weight: bold;
 }
 
+.numbers-warning {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 45px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #ffba08, #f48c06);
+  color: #B9A9FD;
+  font-weight: bold;
+}
+
+.numbers-danger {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 45px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #d00000, #6a040f);
+  color: #B9A9FD;
+  font-weight: bold;
+}
+
 .numbers span:nth-child(1) {
+  font-family: "Rubik";
+  font-size: 68px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.numbers-warning span:nth-child(1) {
+  font-family: "Rubik";
+  font-size: 68px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.numbers-danger span:nth-child(1) {
   font-family: "Rubik";
   font-size: 68px;
   font-weight: 600;

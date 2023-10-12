@@ -22,10 +22,11 @@ span, p {
 
 .container-section {
   width: 80%;
-  height: 465px;
+  height: auto;
   display: flex;
   border-radius: 30px;
   box-shadow: 15px 15px 20px #a391ff71;
+  padding: 10px;
 }
 
 .percentaje {
@@ -79,11 +80,6 @@ span, p {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /*
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    
-    */
     gap: 15px;
     margin-top: 10px;
     flex-wrap: wrap;

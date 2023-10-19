@@ -1,15 +1,30 @@
 @import 'result-component.css';
 @import 'summary-component.css';
 
+html {
+  box-sizing: border-box;
+}
+
 body {
   margin:0;
   padding: 0;
   font-family: 'Raleway', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
 span, p {
   margin: 0;
   padding: 0;
+}
+
+.title-h1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #f3efef;
 }
 
 .container {
@@ -90,4 +105,31 @@ span, p {
     height: 50px;
   }
   
+}
+
+/*
+@media screen and (max-width: 500px) {
+  .summary-component-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+  }
+}
+*/
+
+.footer {
+  background:linear-gradient(to bottom, #4B23CA, #5C45ED);
+  color: #FFF;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1.5rem;
+  align-items: center;
+  font-weight: bold;
+}
+
+a:visited {
+  color: white;
 }

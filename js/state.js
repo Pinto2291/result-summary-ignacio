@@ -9,7 +9,7 @@ let memory = document.getElementById('memory');
 let verbal = document.getElementById('verbal');
 let visual = document.getElementById('visual');
 
-/* percentajes */
+/* Porcentajes */
 
 let reaction_percentaje = document.getElementById('reaction-percentaje');
 let memory_percentaje = document.getElementById('memory-percentaje');
@@ -56,22 +56,39 @@ function randomValues() {
 
     stateRange.innerText = media;
 
-    if(media >= 75) {
+    if(media >= 80) {
+        resultContainer.classList.add('result-component-incredible');
+        numbersContainer.classList.add('numbers-incredible');
+        resultContainer.classList.remove('result-component-warning', 'result-component-danger', 'result-component');
+        numbersContainer.classList.remove('numbers-warning', 'numbers-danger', 'numbers');
+        stateRange.innerText = media;
+        statusRandom.innerText = 'Incredible';
+        paragraph.innerText = 'You have an Incredible performance, amazing result';
+
+    } else if (media >= 71 && media < 80) {
         resultContainer.classList.add('result-component');
         numbersContainer.classList.add('numbers');
-        resultContainer.classList.remove('result-component-warning', 'result-component-danger');
-        numbersContainer.classList.remove('numbes-warning', 'numbers-danger');
+        resultContainer.classList.remove('result-component-warning', 'result-component-danger','result-component-incredible');
+        numbersContainer.classList.remove('numbers-warning', 'numbers-danger', 'numbers-incredible');
         stateRange.innerText = media;
         statusRandom.innerText = 'Great';
-        paragraph.innerText = 'You are a great person, keep going';
-    } else if (media <= 74 && media > 43){
+        paragraph.innerText = 'You are a great person, keep going, you are smart';
+    } else if (media <= 70 && media > 43){
         resultContainer.classList.add('result-component-warning');
         numbersContainer.classList.add('numbers-warning');
-        resultContainer.classList.remove('result-component-warning', 'result-component-danger');
-        numbersContainer.classList.remove('numbes-warning', 'numbers-danger');
+        resultContainer.classList.remove('result-component', 'result-component-danger', 'result-component-incredible');
+        numbersContainer.classList.remove('numbers', 'numbers-danger', 'numbers-incredible');
         stateRange.innerText = media;
-        statusRandom.innerText = 'Great';
-        paragraph.innerText = 'You are a great person, keep going';
+        statusRandom.innerText = 'Fine';
+        paragraph.innerText = 'You can improve your performance, study more';
+    } else if (media <= 43) {
+        resultContainer.classList.add('result-component-danger');
+        numbersContainer.classList.add('numbers-danger');
+        resultContainer.classList.remove('result-component', 'result-component-warning', 'result-component-incredible');
+        numbersContainer.classList.remove('numbers', 'numbers-warning', 'numbers-incredible');
+        stateRange.innerText = media;
+        statusRandom.innerText = 'Bad';
+        paragraph.innerText = 'You are not performing properly, please study';
     }
 }
 

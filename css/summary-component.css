@@ -105,4 +105,5 @@ section.summary-component {
   font-weight: 600;
   color: #FFFFFF;
   cursor: pointer;
+  text-transform: uppercase;
 }

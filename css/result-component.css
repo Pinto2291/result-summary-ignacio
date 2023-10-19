@@ -31,14 +31,26 @@ section.result-component-danger {
   background: linear-gradient(to bottom, #d00000, #6a040f);
 }
 
+section.result-component-incredible {
+  width: inherit;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  border-radius: inherit;
+  background: linear-gradient(to bottom, #04dc25, #0236b9);
+}
+
 .result-component-title h2{
-  margin: 0;
-  color: #CAC4FF;
+  margin: 0.5rem 0;
+  color: #eae9ef;
   /* color: #B9A9FD; */
 }
 
 .result-component-numbers{
   width: 100%;
+  margin: 1.5rem 0;
 }
 
 .result-component-numbers{
@@ -48,8 +60,8 @@ section.result-component-danger {
 }
 
 .numbers {
-  width: 90px;
-  height: 90px;
+  width: 75px;
+  height: 75px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,8 +73,8 @@ section.result-component-danger {
 }
 
 .numbers-warning {
-  width: 90px;
-  height: 90px;
+  width: 75px;
+  height: 75px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,8 +86,8 @@ section.result-component-danger {
 }
 
 .numbers-danger {
-  width: 90px;
-  height: 90px;
+  width: 75px;
+  height: 75px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -86,7 +98,27 @@ section.result-component-danger {
   font-weight: bold;
 }
 
+.numbers-incredible {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 45px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #02f457, #0462b5);
+  color: #B9A9FD;
+  font-weight: bold;
+}
+
 .numbers span:nth-child(1) {
+  font-family: "Rubik";
+  font-size: 68px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.numbers-incredible span:nth-child(1) {
   font-family: "Rubik";
   font-size: 68px;
   font-weight: 600;
@@ -132,4 +164,20 @@ section.result-component-danger {
   color: #CAC4FF;
   font-family: "Rubik";
   line-height: 22px;
+  height: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .numbers span:nth-child(1), .numbers-incredible span:nth-child(1), .numbers-warning span:nth-child(1), .numbers-danger span:nth-child(1)   {
+    font-size: 32px;
+  };
+
+  .result-component-status .status {
+    font-size: 25px;
+  }
+
+  .title-h1 {
+    font-size: 1rem;
+  }
+
 }
